@@ -1,0 +1,127 @@
+
+/*We remove the default margins and padding to define the size of each element ourselves.*/
+*{
+    margin:0;
+    padding:0;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/************************FONTS*****************************************/
+/* We are usinf the font family BigNoodleTitling*/
+@font-face {
+    font-family: 'BigNoT';
+    src: url('../fonts/');
+    src: url('../fonts/?#iefix') format('embedded-opentype'),
+        url('../fonts/BigNoodleTitling.woff2') format('woff2'),
+        url('../fonts/BigNoodleTitling.woff') format('woff'),
+        url('../fonts/BigNoodleTitling.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/************************End of fonts*********************************/
+header{
+    height: 100vh; /*hauteur du header*/
+    background: url('../img/fond.jpg') center;
+    background-size: cover; /*pour utiliser toute la surface de header*/
+    display: flex;/*permet à l'image et la nav d'être à coté'*/
+    align-items: center;
+    justify-content: center;
+    border: 2px solid green; 
+}
+
+header nav { 
+    position: fixed; /*ça bloque la navigation au scroll*/
+    top:50%; /* positionnement en hauteur de a nav*/
+    left: 5%;
+    background:rgba(255,255,255,0.7);
+    border: 2px solid red;
+    transform: translateY(-50%);/*permet de remonter de 50% de la taille de l'élément pour le centrer 
+    parfaitement sur la hauteur le centrer parfaitement*/
+
+}
+
+header nav ul li{
+    padding: 10px 20px;
+    border-bottom:2px solid black;
+}
+
+header nav ul li:last-of-type{
+    border-bottom: none;
+}
+
+header nav ul li a {
+    font-family: 'BigNoT';
+    font-size: 20px;    
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    }
+
+header div {
+        height: 20vw;
+        width: 20vw;
+        border: 4px solid yellow;
+        border-radius: 50%;
+        position:relative;
+        
+    }
+
+header div img{
+        width: 100%;
+        position:absolute;
+        top:0;
+        left: 0;
+}
+
+main {
+    display: flex;/*permet à l'image et la nav d'être à coté'*/
+    align-items: center;
+    justify-content: flex-end;/* ça va à droit*/
+    border: 2px solid blue;
+    background: white;
+}
+
+main section{/*ma section*/
+   
+    width: 70%;  /*largeur de la section*/
+    padding: 100px 0;/*ajoute du rembourrage (marge interne) à la section*/
+    display: flex;
+    flex-wrap: wrap;
+    }
+    
+    
+main section>div {
+    overflow: hidden;
+    height: 250px;
+    width: 250px;
+    margin: 40px;
+}
+
+main section>div>div {
+    border: 1px solid green;
+    position: relative;
+    top: 0;
+    left:0;
+}
+
+main section>div>div>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+}
+
+
+
